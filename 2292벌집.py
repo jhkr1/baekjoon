@@ -11,11 +11,9 @@
 
 room = int(input())
     
-n = 0
+n = 1
 
 while True:
-    if room < 1:
-        break
     max_room = 3*n*(n-1) + 1 
     if room <= max_room: 
         print(n)
