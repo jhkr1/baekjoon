@@ -6,6 +6,7 @@ num = int(input())
 # 문서의 개수 n
 # 몇 번째로 인쇄되었는지 궁금한 문서가 현재 Queue에서 몇 번째에 놓여 있는지를 나타내는 정수 M
 
+
 for _ in range(num):
     n, m = map(int, input().split())
     importance = list(map(int, input().split()))
@@ -22,4 +23,4 @@ for _ in range(num):
             if current[1] == m:
                 print(print_order)
                 break
-    
+            
