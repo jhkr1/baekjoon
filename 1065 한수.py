@@ -22,4 +22,17 @@ for i in range(1,n+1):
 print(cnt)
 
 
+# 개선된 코드
+def is_hansu(num):
+    """숫자가 한수인지 확인"""
+    digits = list(map(int, str(num)))
+    if len(digits) <= 2:
+        return True  # 1~99는 모두 한수
+    return all(digits[i] - digits[i + 1] == digits[i + 1] - digits[i + 2] for i in range(len(digits) - 2))
+
+
+n = int(input())
+cnt = sum(1 for i in range(1, n + 1) if is_hansu(i))  # 한수인 경우 개수를 합산
+print(cnt)
+
 
